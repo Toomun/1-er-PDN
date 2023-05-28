@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*CSS para el header, links, responsive*/
+header{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    padding: 10px 10px 10px 10px;
+    justify-content: space-between;
+    background-color: #1b1b1b;
+}
+
+.logo{
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items:center;
+    gap: 10px;
+}
+
+
+.logo-img{
+    display:flex;
+    height: 4.5rem;
+    width: 4.5rem ;
+    border-radius: 20px;
+    background-color:rgb(71, 112, 245);
+}
+
+
+.nombre-proyecto{
+    position:relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 2.6vw;
+    color: #1b1b1b;
+    -webkit-text-stroke: 0.10vw #1b1b1b;
+}
+
+.nombre-proyecto::before{
+    
+    content:attr(data-text);
+    position: absolute;
+    top:0;
+    left: 0;
+    width:0;
+    height: 100%;
+    color:rgb(71, 112, 245);
+    border-right: 2px solid rgb(71, 112, 245);
+    overflow:hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0%,10%,80%{
+        width:0;
+    }
+    60%,80%{
+        width:100%;
+    }
+
+}
+
+
+.nav-list{
+    display:flex;
+    list-style-type: none;
+    gap:1rem;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: #ecececec;
+    font-size: 18px;
+    border: 2px solid #ecececec;
+}
+
+.abrir-menu , .cerrar-menu {
+    display:none;
+}
+
+.btn{
+    text-decoration: none;
+    display:flex;
+    font-family: 'Poppins', italic;
+    font-size: 20px;
+    border-radius:10px;
+    padding: 15px 12px;
+    font-size: 0.2rem;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn:hover {
+    color: black;
+    border: 3px solid rgb(71, 112, 245);
+    background-color: rgb(71, 112, 245);
+}
+/*Config del Body*/
+
+body{
+    background-color: #252525;
+    font-family: 'Poppins', italic;
+}
+
+footer {
+    padding: 15px 10px 15px 10px;
+    text-align: center;
+    background-color: #1b1b1b;
+    color:#ecececec;
+    font-size: 14px;
+  }
+  
+
+.caja_tp{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(800px,1fr));
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.caja_playlist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.caja_playlist .texto {
+    padding: 10px;
+    text-align: baseline;
+    font-size: 15px;
+    text-align:center;
+}
+
+.caja_playlist iframe{
+    width: 800px;
+    height: 400px;
+}
+
+.caja_playlist h1 {
+    text-align: center;
+    color:black;
+}
+
+/*Puntos de corte */
+
+@media screen and (max-width: 500px){
+
+    .caja_tp{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+    }
+    .caja_playlist iframe{
+        width: 270px;
+        height: 300px;
+    }
+
+    iframe {
+        width: 200px;
+        height: 100px;
+    }
+
+    .caja_playlist .texto {
+        padding: 10px;
+        text-align: baseline;
+        font-size: 10px;
+        text-align:center;
+    }
+    
+    .caja_playlist h1 {
+        text-align: center;
+        color:black;
+    }
+    
+
+}
+
+@media screen and (max-width: 700px){
+
+    .caja_tp{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+    }
+
+    .caja_playlist iframe {
+        width: 200px;
+        height: 100px;
+    }
+
+    .caja_playlist .texto{
+        font-size: 10px;
+    }
+
+
+    .textoF h2{
+        font-size: 15px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+    /*Config de las opciones del header*/
+    /*Aca aparece el menu hamburguesa*/
+
+    .banner{
+        display:none;
+    }
+    .abrir-menu , .cerrar-menu{
+        display:block;
+        font-size: 1.5rem;
+        border:0;
+        background-color: transparent;
+        cursor:pointer;
+    }
+
+    .abrir-menu{
+        color:rgb(50, 97, 252);
+    }
+    .cerrar-menu{
+        color:rgb(50, 97, 252);
+    }
+
+    .abrir-menu:hover{
+        color:white;
+    }
+    .cerrar-menu:hover{
+        color:white;
+    }
+
+
+    .nav{
+        opacity:0;
+        visibility: hidden;
+    }
+
+    .nav{
+        opacity: 0;
+        visibility:hidden;
+        display:flex;
+        flex-direction:column;
+        align-items:end;
+        gap:1rem;
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        background-color:#000000;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items:end;
+    }
+
+    .nav-list li a{
+        color: #ecececec;
+    }
+    .nav.visible{
+        opacity:1;
+        visibility: visible;
+    }
+
+    /*Config de el logo y el titulo*/
+    .logo-img{
+        display:flex;
+        height: 2rem;
+        width: 2rem ;
+        border-radius: 10.5x;
+        background-color:white;
+    }
+
+
+    
+    .textoF{
+        font-size: 15px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .caja_playlist iframe {
+        width: 500px;
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    
+    .logo-img {
+        width: 50px;
+        height: 50px;
+        border:#141414
+    }
+
+    .nombre-proyecto{
+        display:none;
+    }
+
+    .caja_playlist iframe {
+        width: 300px;
+        height: 400px;
+    }
+
+
+    
+
+
+}
+
+
+@media screen and (max-width: 300px){
+    
+    .logo-img {
+        width: 50px;
+        height: 50px;
+        border:#141414
+    }
+
+    .nombre-proyecto{
+        display:none;
+    }
+
+    .caja_tp{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+    }
+
+    .caja_playlist iframe {
+        width: 200px;
+        height: 400px;
+    }
+
+
+    
+
+
+}
+

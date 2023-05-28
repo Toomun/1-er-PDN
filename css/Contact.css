@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*CSS para el header, links, responsive*/
+header{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    padding: 10px 10px 10px 10px;
+    justify-content: space-between;
+    background-color: #1b1b1b;
+}
+
+.logo{
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items:center;
+    gap: 10px;
+}
+
+
+.logo-img{
+    display:flex;
+    height: 4.5rem;
+    width: 4.5rem ;
+    border-radius: 20px;
+    background-color:rgb(71, 112, 245);
+}
+
+
+.nombre-proyecto{
+    position:relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 2.6vw;
+    color: #1b1b1b;
+    -webkit-text-stroke: 0.10vw #1b1b1b;
+}
+
+.nombre-proyecto::before{
+    
+    content:attr(data-text);
+    position: absolute;
+    top:0;
+    left: 0;
+    width:0;
+    height: 100%;
+    color:rgb(71, 112, 245);
+    border-right: 2px solid rgb(71, 112, 245);
+    overflow:hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0%,10%,80%{
+        width:0;
+    }
+    60%,80%{
+        width:100%;
+    }
+
+}
+
+
+.nav-list{
+    display:flex;
+    list-style-type: none;
+    gap:1rem;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: #ecececec;
+    font-size: 16px;
+    border: 2px solid #ecececec;
+}
+
+.abrir-menu , .cerrar-menu {
+    display:none;
+}
+
+.btn{
+    text-decoration: none;
+    display:flex;
+    font-family: 'Poppins', italic;
+    font-size: 20px;
+    border-radius:10px;
+    padding: 15px 12px;
+    font-size: 0.2rem;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn:hover {
+    color: black;
+    border: 3px solid rgb(71, 112, 245);
+    background-color: rgb(71, 112, 245);
+}
+
+/*Config del Body*/
+
+body{
+    background-color: #252525;
+    font-family: 'Poppins', italic;
+}
+
+footer {
+    padding: 15px 10px 15px 10px;
+    text-align: center;
+    background-color: #1b1b1b;
+    color:#ecececec;
+    font-size: 14px;
+}
+
+/*estilos para el formulario de contacto*/
+
+.contacto {
+    max-width: 700px;
+    margin: 1% auto;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    background: #868181;
+    border: 2px solid rgb(177, 171, 165);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contacto h2 {
+    padding: 0.8em;
+    padding-bottom: 0.5em;
+}
+
+.contenedor-form, .formulario {
+    padding: 1em;
+    border-radius: inherit;
+}
+
+label {
+    display: flex;
+    padding-bottom: 0.3em;
+}
+
+
+.formulario input {
+    padding: 0.2em;
+}
+
+.formulario input, textarea {
+    width: 100%;
+    resize: none;
+    margin-bottom: 0.5em;
+    border: 1px solid ;
+    border-radius: 4px;
+    outline: none;
+    background: #ecdfdf8e;
+}
+
+.form-btn {
+    width: 100%;
+    display: flex;
+    color:white;
+    justify-content: center;
+    font-weight: bolder;
+    border-radius: 8px;
+    padding: 4px;
+    border: 1px solid rgba(50, 86, 204, 0.952);
+    background-color: rgba(50, 86, 204, 0.952);
+}
+
+.form-btn:hover {
+    box-shadow: 0 0 10px 5px rgba(85, 100, 185, 0.5);
+}
+
+p {
+    text-align: left;
+    margin-bottom: 0.9em;
+}
+
+.info-adic {
+    padding: 1.2em;
+    background: rgb(245, 235, 235);
+}
+
+.programa-img {
+   width: 100%;
+}
+
+.info-adic p {
+    font-size: 12px;
+    padding-top: 5px;
+    text-align: justify;
+    justify-content: center;
+}
+
+/*clases y estilos de validacion de formulario */
+.form-control.ok input {
+    border: 1px solid #1bb549f6;
+    outline: none;
+}
+
+.form-control.falla input {
+    border: 1px solid #dd2a1e;
+    outline: none;
+}
+
+.form-control.ok textarea {
+    border: 1px solid #1bb549f6;
+    outline: none;
+}
+
+.form-control.falla textarea {
+    border:1px solid #dd2a1e;
+    outline: none;
+}
+
+.form-control.falla p {
+    visibility: visible;
+    color:#b81c11;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.form-control.ok p {
+    visibility: hidden;
+}
+
+/* Estilos para pantallas hasta 480px */
+@media (max-width: 480px) {
+    .contacto {
+        max-width: 100%;
+        margin: 10% 2%;
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-form, .info-adic {
+        display: block;
+    }
+
+    .formulario input,
+    .formulario textarea {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .form-btn {
+        width: 100%;
+    }
+}

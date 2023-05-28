@@ -1,0 +1,285 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*CSS para el header, links, responsive*/
+header{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  padding: 10px 10px 10px 10px;
+  justify-content: space-between;
+  background-color: #1b1b1b;
+}
+
+.logo{
+  display:flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items:center;
+  gap: 10px;
+}
+
+
+.logo-img{
+  display:flex;
+  height: 4.5rem;
+  width: 4.5rem ;
+  border-radius: 20px;
+  background-color:rgb(71, 112, 245);
+}
+
+
+.nombre-proyecto{
+  position:relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  font-size: 2.6vw;
+  color: #1b1b1b;
+  -webkit-text-stroke: 0.10vw #1b1b1b;
+}
+
+.nombre-proyecto::before{
+  
+  content:attr(data-text);
+  position: absolute;
+  top:0;
+  left: 0;
+  width:0;
+  height: 100%;
+  color:rgb(71, 112, 245);
+  border-right: 2px solid rgb(71, 112, 245);
+  overflow:hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+  0%,10%,80%{
+      width:0;
+  }
+  60%,80%{
+      width:100%;
+  }
+
+}
+
+
+.nav-list{
+  display:flex;
+  list-style-type: none;
+  gap:1rem;
+}
+
+.nav-list li a{
+  text-decoration: none;
+  color: #ecececec;
+  font-size: 16px;
+  border: 2px solid #ecececec;
+}
+
+.abrir-menu , .cerrar-menu {
+  display:none;
+}
+
+.btn{
+  text-decoration: none;
+  display:flex;
+  font-family: 'Poppins', italic;
+  font-size: 20px;
+  border-radius:10px;
+  padding: 15px 12px;
+  font-size: 0.2rem;
+  cursor: pointer;
+  transition: .5s;
+}
+.btn:hover {
+  color: black;
+  border: 3px solid rgb(71, 112, 245);
+  background-color: rgb(71, 112, 245);
+}
+
+/*Estilos del body*/
+
+body{
+  background-color: #252525;
+  font-family: 'Poppins', italic;
+}
+
+footer {
+  padding: 15px 10px 15px 10px;
+  text-align: center;
+  background-color: #1b1b1b;
+  color:#ecececec;
+  font-size: 14px;
+}
+
+main h2{
+  height: 10%;
+  text-align: center;
+  color: aliceblue;
+  
+}
+
+.paginas1 h3 {
+  text-align: center;
+  margin: 10px;
+  color: aliceblue;
+}
+
+main .caja1 {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  justify-content:space-around;
+  width: 100%;
+  
+}
+
+/* Estilos generales de la tarjeta */
+.card {
+    min-width: 250px;
+    margin: 30px;
+    justify-content:space-around;
+    text-align: justify;
+    font-family: 'Poppins', italic;
+    padding: 20px;
+    background: rgb(168, 159, 159);
+    border-radius: 10px;
+  }
+  
+  .card h4 {
+    color:rgb(74, 27, 112);
+  }
+
+  /* Estilos de la imagen */
+  .card img {
+    max-width: 100%;
+  }
+  
+  /* Estilos del contenedor de texto */
+  .container {
+    padding: 2px 16px;
+  }
+  
+  /* Estilos del título de la tarjeta */
+  h4 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: black;
+  }
+  
+  /* Estilos del párrafo de la tarjeta */
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  /* Estilos del enlace de la tarjeta */
+.linkpage {
+    width: 100%;
+    display: flex;
+    color:white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    justify-content: center;
+    font-weight: bolder;
+    border-radius: 8px;
+    padding: 3px;
+    border: 1px solid rgba(50, 86, 204, 0.952);
+    background-color: rgba(50, 86, 204, 0.952);
+  }
+
+.linkpage:hover {
+  box-shadow: 0 0 10px 5px rgba(85, 100, 185, 0.5);
+  }
+
+
+  @media screen and (max-width: 1000px){
+    /*Config de las opciones del header*/
+    /*Aca aparece el menu hamburguesa*/
+
+    .banner{
+        display:none;
+    }
+    .abrir-menu , .cerrar-menu{
+        display:block;
+        font-size: 1.5rem;
+        border:0;
+        background-color: transparent;
+        cursor:pointer;
+    }
+
+    .abrir-menu{
+        color:rgb(50, 97, 252);
+    }
+    .cerrar-menu{
+        color:rgb(50, 97, 252);
+    }
+
+    .abrir-menu:hover{
+        color:white;
+    }
+    .cerrar-menu:hover{
+        color:white;
+    }
+
+
+    .nav{
+        opacity:0;
+        visibility: hidden;
+    }
+
+    .nav{
+        opacity: 0;
+        visibility:hidden;
+        display:flex;
+        flex-direction:column;
+        align-items:end;
+        gap:1rem;
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        background-color:#000000;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items:end;
+    }
+
+    .nav-list li a{
+        color: #ecececec;
+    }
+    .nav.visible{
+        opacity:1;
+        visibility: visible;
+    }
+
+    /*Config de el logo y el titulo*/
+    .logo-img{
+        display:flex;
+        height: 2rem;
+        width: 2rem ;
+        border-radius: 10.5px;
+        background-color:white;
+    }
+
+    main .caja1 {
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+    .card img {
+      width: 100%;
+     }
+}
+
+  

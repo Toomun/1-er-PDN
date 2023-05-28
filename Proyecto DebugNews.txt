@@ -1,0 +1,112 @@
+Pagina de Programacion, noticias de informatica.
+tutoriales, listas de reproduccion desde youtube.
+
+titulo:
+
+	DebugNews
+
+temas a tratar sobre las noticias:
+	IA's, programacion, novedades de computacion, celulares y diversas tecnologias.
+	Aplicaciones, Juegos, Ciencia Ficcion, Ciencia espacial.
+	Series y entretenimientos, peliculas, impactos de la informatica y la programacion en diversos ambitos como deporte, automovilismo, etc.
+
+
+esquema de colores: 
+	la mayoria de las paginas usan esuqemas de colores calidos, eligiendo fondo blanco con paletas que van del negro a colores frios para los encabezados principales.
+
+esquema de paginas:
+	usan un esquema de lista de noticias con un titulo llamativo y un resumen de la noticia, algunas usan una foto para presentar la noticia, otras crean una
+	lista pequena de las mismas donde las presentan como se dijo antes.
+
+
+Cosas para agregar:
+
+paginas de :
+	inicio, contacto, aprendizaje, noticias.
+	noticias: 4
+	opcional: seccion de comentarios.
+	contacto: formulario, mail.
+
+	opcional: registro e inicio de sesion.
+
+
+Anadir podcast, playlist, canciones, etc.
+
+Opciones de colores:
+	opcion 1:
+		gris: #594747
+		violeta oscuro: #6743a5
+		violeta un poco mas claro: #7345d6
+		gris oscuro: #2e2e2e
+		cremita oscurito: #bfab93
+
+	opcion 2: 
+		gris:#343838
+		verde agua oscuro: #005f6b
+		verde agua menos oscuro: #008c9e
+		celeste oscuro: #00b4cc
+		celeste: #00dffc
+
+	opcion 3:
+		negro claro: #160d18
+		violeta oscuro: #23145b
+		verde agua oscuro: #09456c
+		verde agua menos oscuro: #026f6e
+		verde agua clarito:#1ca39e
+
+	opcion 4:
+		marron grisaseo: #332222
+		bordo oscuro: #4d1a1a
+		bordo menos oscuro: #661111
+		bordo: #800909
+
+	opcion 5:
+		blanco: #ffffff
+		verde militar: #a1ac88
+		gris: #757575
+		azul seco: #464d70
+		negro: #000000
+
+	opcion 6: 
+		gris oscuro: #2b2726
+		verde agua oscuro: #0a516d
+		verde agua: #018790
+		verde militar: #7dad93
+		verde militar claro: #bacca4
+
+
+	opcion degrade 1:
+
+		background: -webkit-linear-gradient(-32deg, rgb(21, 161, 31), rgb(20, 45, 90));
+		background: linear-gradient(-32deg, rgb(21, 161, 31), rgb(20, 45, 90));
+
+	opcion degrade 2:
+
+		background: -webkit-linear-gradient(-4deg, rgb(54, 1, 113), rgb(0, 0, 0));
+		background: linear-gradient(-4deg, rgb(54, 1, 113), rgb(0, 0, 0));
+
+	opcion 3 degrade:
+
+
+		background: -webkit-linear-gradient(-4deg, rgb(0, 148, 102), rgb(0, 0, 0));
+		background: linear-gradient(-4deg, rgb(0, 148, 102), rgb(0, 0, 0));
+
+	
+
+
+
+ faltantes:
+
+
+	las 4 paginas
+	el formulario
+	iframes
+	ya tengo el flexbox, falta el grid 
+	consumir una api rest desde javascript
+	
+key de la api: 2af29f5711bb4c4bb8b3345278df8e92
+
+
+
+index
+noticias
