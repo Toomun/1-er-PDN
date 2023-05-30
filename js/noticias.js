@@ -15,8 +15,9 @@ const cargarNoticias = async (categoria) => {
                 noticias += `<a href ='${noticia.readMoreUrl}'>
                             <div class ="item">
                             <h3 class ="titnot">${noticia.title}</h3>
-                            <img class="imgnot " src="${noticia.imageUrl}">
-                            <h5 class="fuentenot"> 
+                            <div class = 'cajaimg'>
+                            <img class="imgnot " src="${noticia.imageUrl}" height = '200' width='380'>
+                            </div>
                             <h5 class="datenot">${noticia.date}</h5>
                             </div>
                             </a>`;
