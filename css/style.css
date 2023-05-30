@@ -319,8 +319,11 @@ body{
     }
 
     .container-noticias .item .imgnot {
-        width: 450px;
-        height:  300px;
+        display:flex;
+        position:relative;
+        flex-flow: row;
+        height: 100%;  
+        width: 100%;
     }
 
 
