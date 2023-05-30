@@ -283,14 +283,26 @@ body{
     
     .container-noticias {
         display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+        justify-content: space-around;
+        overflow: hidden;
         gap: 10px;
+        grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
         margin: 15px;
-        justify-content: space-between;
     }
 
     .container-noticias a {
         text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        gap: 10px;
+        background-color: antiquewhite;
+        color:black;
+        border:2px solid #141414;
+        border-radius: 10px;
+        padding: 10px;
+        cursor: pointer
     }
 
     .container-noticias .item{
@@ -298,10 +310,9 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
         background-color: antiquewhite;
         color:black;
-        border:2px solid #141414;
         border-radius: 10px;
         padding: 10px;
         cursor: pointer
@@ -314,7 +325,7 @@ body{
         border-radius: 10px;
     }
 
-    .container-noticias .item:hover {
+    .container-noticias a:hover {
         box-shadow: 0px 0px 10px 5px antiquewhite;
     }
 
@@ -324,6 +335,7 @@ body{
         flex-flow: row;
         height: 100%;  
         width: 100%;
+        overflow: hidden;
     }
 
 
@@ -514,7 +526,7 @@ body{
         overflow: hidden;
     }
 
-    .container-noticias .item h2{
+    .container-noticias .item h3{
         color:black;
         font-size: 15px;
     }
@@ -523,11 +535,6 @@ body{
     .textoF{
         font-size: 15px;
         text-align: center;
-    }
-
-    .container-noticias .item .imgnot {
-        width: 230px;
-        height:  200px;
     }
 
 
